@@ -45,19 +45,21 @@ for(i=0; i<supplyChanges.length; i++){
   if(supplyChanges[i] > 0){
     positive = supplyChanges[i];
     positives.push(positive);
-    console.log(positives);}
+    }
   else{ if (supplyChanges[i] < 0){
     negative = supplyChanges[i];
     negatives.push(negative);
-    console.log(negatives);}
+    }
   else{ if (supplyChanges[i] === 0){
     zero = supplyChanges[i];
     zeroes.push(zero);
-    console.log(zeroes);
       }
     }
   } 
 }
+console.log('the negatives array', negatives);
+console.log('the positives array',positives);
+console.log('the zeroes array',zeroes);
 
 
 // ***** STRETCH GOALS *********************************************
@@ -66,12 +68,35 @@ for(i=0; i<supplyChanges.length; i++){
 //    'stretchNegatives', and 'stretchZeroes'. 
 console.log('7. Looping through supplyChanges to populate more arrays with positive, negative, and zero values:');
 
+let stretchNegatives = [];
+let stretchPositives = [];
+let stretchZeroes = [];
+
+for(integer of supplyChanges){
+  if(integer > 0){
+    stretchPositives.push(integer);
+  } else if (integer < 0 ){
+    stretchNegatives.push(integer);
+  } else if (integer === 0){
+    stretchZeroes.push(integer);
+  }
+}
+
+console.log('the stretch Negatives Array', stretchNegatives);
+console.log('the stretch Positives Array',stretchPositives);
+console.log('the stretch Zeroes Array', stretchZeroes);
 
 // 8. Create a variable called 'totalParts' and assign it a value of 0.
 //    Then, write a loop that adds each value of the 'supplyChanges'
 //    array to the 'totalParts' variable.
 console.log('8. Looping through supplyChanges to calculate the sum:');
 
+let totalParts = 0
+
+for (integer of supplyChanges){
+  totalParts = integer + totalParts;
+}
+console.log('the sum of the array is', totalParts);
 
 // 9. We have a large stash of parts in our warehouse that we 
 //    need to box up and get ready for shipment. There are 572
