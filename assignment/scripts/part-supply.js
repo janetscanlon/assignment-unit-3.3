@@ -41,8 +41,18 @@ let positives = [];
 let negatives = [];
 let zeroes = [];
 
+for(i=0; i<supplyChanges.length; i++){
+  if(supplyChanges[i] > 0){
+    positive = supplyChanges[i];
+    positives.push(positive);
+    console.log(positives);}
+  else{ if (supplyChanges[i] < 0);
+    console.log(supplyChanges[i]);
+  }
+  
 
-
+}
+  
 
 // ***** STRETCH GOALS *********************************************
 // 7. Rewrite the 'for' loop from #6 as a 'for...of' loop. Instead of 'positives',
