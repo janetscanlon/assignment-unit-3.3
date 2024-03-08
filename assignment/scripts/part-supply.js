@@ -42,21 +42,16 @@ let negatives = [];
 let zeroes = [];
 
 for(i=0; i<supplyChanges.length; i++){
-  if(supplyChanges[i] > 0){
-    positive = supplyChanges[i];
-    positives.push(positive);
-    }
-  else{ if (supplyChanges[i] < 0){
-    negative = supplyChanges[i];
-    negatives.push(negative);
-    }
-  else{ if (supplyChanges[i] === 0){
-    zero = supplyChanges[i];
-    zeroes.push(zero);
+  let integer = supplyChanges[i];  
+  if(integer > 0){
+    positives.push(integer);
+    } else if (integer < 0){
+    negatives.push(integer);
+    } else if (integer === 0){
+    zeroes.push(integer);
       }
     }
-  } 
-}
+  
 console.log('the negatives array', negatives);
 console.log('the positives array',positives);
 console.log('the zeroes array',zeroes);
